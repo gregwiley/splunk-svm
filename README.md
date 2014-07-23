@@ -26,9 +26,27 @@ Features new in 1.3
  runs cmd in running splunk instances 
  tab completion semi-fixes (still some TODO)
 
-Feature requests not implemented
- svm install
- this should install a new Splunk instance from config zip file location and assign new web/managment ports, the name of the splunk instance will be a command line arg
+Features new in 1.4
+ svm install|create <instance_name>
+  install a new Splunk instance from package file (see SPLUNK_SOFTWARE & SPLUNK_VERSION
+  in bashrc file) - uses new port numbers if required
+ svm stop
+  stop current Splunk instance
+ svm restart
+  restarts current Splunk instance
+ svm remove
+  removes current Splunk instance
+ svm clean
+  kills all running splunkd and python processes (perhaps a bit aggressive for Python!)
+
+Changed features in 1.4
+ svm open
+  starts Splunk instance if not already started
+ svm list
+  adds a 'Running' column to indicate running state of Splunk instances
+ svm <instance_name>
+  changes directory to $SPLUNK_HOME
+ fixed autocompletion rules
 
 Setup instructions are in the top of the bashrc file
 
